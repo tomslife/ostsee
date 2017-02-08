@@ -1,0 +1,42 @@
+<div role="main" class="ui-content bg9" data-theme="c"> 
+
+<div data-theme="c" class="ui-body">
+	<form>
+	
+	
+			<label for="datumVon" class="ui-hidden-accessible">Von</label><input type="text" data-theme="i" name="datumVon" placeholder="Von" ontouchstart="(this.type='date')">
+			<label for="datumBis" class="ui-hidden-accessible">bis</label><input type="text" data-theme="i" name="datumBis" placeholder="bis" ontouchstart="(this.type='date')">
+		
+			
+				<label for="eventTyp" class="select ui-hidden-accessible">Event-Typ</label>
+<select name="eventTyp" id="eventTyp2" data-theme="j" data-native-menu="true" class="formSelect">
+    <option value="standard">Alle Events</option>
+    <option value="rush">Familie</option>
+    <option value="express">Feste</option>
+    <option value="overnight">Konzerte</option>
+    <option value="overnight">Lesungen</option>
+    <option value="overnight">Natur</option>
+</select>
+
+				<label for="eventOrte" class="select ui-hidden-accessible">Orte</label>
+<select name="eventOrte" id="eventOrte" data-theme="j" data-native-menu="true" class="formSelect">
+    <option value="standard">Alle Städte und Regionen</option>
+    <option value="rush">Eckernförder Bucht</option>
+    <option value="express">Fehmarn</option>
+    <option value="overnight">Flensburg Fjord</option>
+    <option value="overnight">Halbinsel Schwansen</option>
+    <option value="overnight">Hohwachter Bucht</option>
+    <option value="overnight">Holsteinische Schweiz</option>
+    <option value="overnight">Lübecker Bucht</option>
+    <option value="overnight">OstseeFerienland</option>
+    <option value="overnight">OstseeSpitze & Großebrode</option>
+    <option value="overnight">Probstei & Kieler Förde</option>
+</select>
+
+	<a href="#pageVliste" class="ui-btn ui-corner-all ui-btn-j formButton">SUCHEN</a>
+	
+	</form>
+	
+	</div>
+
+</div>

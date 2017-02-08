@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#panel {
+	display:none;
+	position:fixed; top:77px;
+	width:14em; height:100%;
+	/* background-color:#008a9f; */
+	background-color:#009bb1;
+	padding:0 !important;
+	box-shadow:none !important;
+	}
+
+#smallPanel {
+	}
+
+#panel ul {
+	width:100%; padding:3px;
+	}
+
+#panel li {
+	margin-bottom:6px; display:table; table-layout:fixed;
+	    -webkit-transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+
+.hidePanelButton {
+	margin-left:-9999;
+	}
+	
+.showPanelButton {
+	margin-left:0;
+	}
+
+.panelCatIconContainer {
+	display:table-cell; height:41px; width:41px; line-height:38px; border-radius:50%; text-align:center;
+	}
+
+.panelCatIconContainer img {
+	width:31px; height:31px;
+	}
+
+#smallPanel img {
+	}
+
+#panel ul img {
+	display:inline-block;
+	vertical-align:middle;
+	}
+
+.panelCatTextContainer {
+	padding-left:10px; text-align:center;
+	}
+
+#tapOpenPanel, #tapClosePanel {
+	padding:10px 15px; width:20px; height:20px;
+	}
+	
+.filterTransparent {
+	background-color:transparent !important;
+	}

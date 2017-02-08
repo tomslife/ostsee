@@ -1,0 +1,41 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/Main.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Untitled Document</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="../css/theme.min.css">
+<link rel="stylesheet" href="../scripts/jqMobile/jquery.mobile.structure-1.4.5.min.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../_css/themeChange.css">
+<link rel="stylesheet" href="../css/start.css">
+<!-- InstanceBeginEditable name="head" -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+
+	<!-- InstanceBeginEditable name="PageSetup" -->	<div data-role="page" id="xxxxxxxxxxxxx"><!-- InstanceEndEditable -->
+	
+		<!-- InstanceBeginEditable name="HeaderContainer" -->		
+		<div data-role="header"></div>
+		<!-- InstanceEndEditable -->	
+		
+		<div role="main" class="ui-content">
+			<!-- InstanceBeginEditable name="Content" -->Content<!-- InstanceEndEditable -->
+		</div>
+		
+	<!-- InstanceBeginEditable name="Panel" -->
+	
+	<!-- InstanceEndEditable -->
+		
+		
+	</div>
+
+
+</body>
+<!-- InstanceEnd --></html>

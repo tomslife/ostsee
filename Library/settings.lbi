@@ -1,0 +1,35 @@
+<div role="main" class="ui-content">
+
+	<div id="detailContentContainer" class="ui-body settings">
+		<h2>Impressum</h2>
+		<p><strong>Inhaltlich Verantwortlicher:</strong><br>
+		Ostsee-Holstein-Tourismus e.V.<br>
+		Am Bürgerhaus 2<br>
+		23683 Scharbeutz<br>
+		Deutschland</p>
+		
+		<p>Service-Telefon: <a href="tel:+4904503888525">+49 (0) 45 03 – 888 525</a><br>
+		E-Mail: <a href="mailto:info@ostsee-sh.de">info@ostsee-sh.de</a>
+		</p>
+
+		<p><strong>Geschäftsführerin:</strong><br>
+		Katja Lauritzen</p>
+		
+		<p><strong>Steuernummer:</strong><br>
+			FA Lübeck 22.296.26032<br>
+		</p>
+
+		<p><strong>Handelsregister:</strong><br>
+		Amtsgericht Lübeck, VR 1097<br>
+		Firmensitz: 23683 Scharbeutz</p>
+		</p>
+		
+		
+		<p><strong>Gestaltung & Entwicklung:</strong><br>
+		WEISS&KOHNEN - Agentur für Dialogmarketing GmbH<br>
+		St. Annenufer 2, III. Boden<br>
+		D-20457 Hamburg<br>
+		Web: <a href="http://www.weiss-kohnen.de" target="_blank">www.weiss-kohnen.de</a>
+		</p>
+	</div>
+</div>

@@ -1,0 +1,22 @@
+<div data-role="header" data-position="fixed" data-tap-toggle="false" data-add-back-btn="true">
+	<a data-rel="back" class="headerButton tapBack button"></a>
+
+	<h1>
+		<div class="headerSwitch">
+			<ul class="headerSwitch_ul">
+				<li class="tapKarte button">Karte</li>
+				<li class="tapListe button">Liste</li>	
+			</ul>
+		</div>
+		
+		<!-- Header-Logo für Settings / Impressum -->
+		<img src="../images/icons/logo-ostsee-white-ul.svg" class="headerLogo">
+
+		<!-- div class="headerSearch">
+			<a href="#pageVsuche"><img src="../images/icons/iconSucheLupe_weiss.png"></a>
+		</div -->
+
+	</h1>
+	<a class="headerButton tapHome button"></a>
+</div>
+

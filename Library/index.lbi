@@ -1,0 +1,32 @@
+<div role="main" class="ui-content">
+	<div id="startContainer" data-position="fixed">
+<a href="#pageSettings" id="tapSettings" data-transition="slide"><i class="material-icons button fontColorA">info_outline</i></a>
+		<ul class="fontColorA fontSizeA">
+			<a id="tapUrlaubsorte">
+			<li>
+				<div class="button"><span></span><img src="../images/buttons/start_U_icon.png"></div>
+				<p class="fontColorA uppercase">Urlaubsorte</p>
+			</li>
+			</a> <a id="tapVeranstaltungen">
+			<li>
+				<div class="button"><span></span><img src="../images/buttons/start_V_icon.png"></div>
+				<p class="fontColorA uppercase">Veranstaltungen</p>
+			</li>
+			</a> <a id="tapAusflugstipps">
+			<li>
+				<div class="button"><span></span><img src="../images/buttons/start_A_icon.png"></div>
+				<p class="fontColorA uppercase">Ausflugstipps</p>
+			</li>
+			</a> <a id="tapInDerNahe">
+			<li>
+				<div class="button"><span></span><img src="../images/buttons/start_I_icon.png"></div>
+				<p class="fontColorA uppercase">In der N&auml;he</p>
+			</li>
+			</a>
+		</ul>
+	</div>
+</div>
+
+<img src="" id="sectionImagePreloaderU" style="display:none;">
+<img src="" id="sectionImagePreloaderV" style="display:none;">
+<img src="" id="sectionImagePreloaderA" style="display:none;">

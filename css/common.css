@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Border-Hilfen */ .border01 { border:1px solid green;} .border02 { border:1px solid red;} .border03 { border:1px solid blue;}
+/* Box-Sizing     div, header, footer, p, h1, h2, h3, h4, h5, h6, ul, li, form, input { box-sizing:border-box !important;} */
+/* All Borders */ div, header, footer, p, h1, h2, h3, h4, h5, h6, ul, li, form, input {border:0px solid #555}
+/* Margins = 0 */ p, ul {margin:0; padding:0}
+.show {display:block !important;} .hide {display:none !important; visibility:hidden !important;}
+.uppercase {text-transform:uppercase;}
+.p10 {padding:10px;}
+a {cursor:pointer;}
+.animate {	    -webkit-transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+
+/* simuliert Button Tap */
+.button:active {
+	-webkit-transform: scale3d(0.9, 0.9, 1);
+	}
+
+ul { list-style-type:none;}
+
+/* TEXT-GRöSSEN */
+.fontSizeA {font-size:0.8rem} /* Startseite */
+.fontSizeB {font-size:1.2rem; line-height:1.2rem;} /* h1 Überschrift */
+.fontSizeC {font-size:1.0rem;} /* Lesetext */
+.fontFormatPoiName {font-size:1.0rem !important; line-height:1.0rem !important;}
+
+/* TEXT-FARBEN */
+.fontColorA {color:#fff !important; text-shadow:none;} .fontColorB {color:#00457d} .fontColorC {color:#000 !important;}
+
+.font1 {color:#008a9f}
+.font2 {color:#cab39a}
+.font3 {color:#1eae9c}
+.font4 {color:#42b6e9}
+.font5 {color:#b55c9c}
+.font6 {color:#d4004b}
+.font7 {color:#004981}
+.font8 {color:#a4adb6}
+
+/* BG-FARBEN */
+.bg1 {background-color:#008a9f} /* Orte alt: 416799*/
+.bg2 {background-color:#cab39a} /* Strände alt: 50bca6*/
+.bg3 {background-color:#1eae9c} /* Gastronomie alt: e39a70*/
+.bg4 {background-color:#42b6e9} /* Kinder alt: de91b7*/
+.bg5 {background-color:#b55c9c} .fontColor5 {color:#b55c9c} /* Ausflugstipps alt: 9cce6f*/
+.bg6 {background-color:#d4004b} /* Lieblingsplätze alt: cf6566*/
+.bg7 {background-color:#004981} /* Parking alt: 447acb*/
+.bg8 {background-color:#a4adb6} /* Information alt: 5b5b5b*/
+.bg9 {background-color:#cab39a} .fontColor9 {color:#cab39a}/* Veranstaltungen alt: 2f747e */
+.bg10 {background-color:#00434c} /* Header Buttonfarbe */
+.bg11 {background-color:#fff} /* Header Schieberegler */
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/MaterialIcons/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(../fonts/MaterialIcons/MaterialIcons-Regular.woff2) format('woff2'),
+       url(../fonts/MaterialIcons/MaterialIcons-Regular.woff) format('woff'),
+       url(../fonts/MaterialIcons/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Untitled Document</title>
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" href="../css/theme.min.css">
+<link rel="stylesheet" href="../scripts/jqMobile/jquery.mobile.structure-1.4.5.min.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../_css/themeChange.css">
+<link rel="stylesheet" href="../css/start.css">
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+
+	<!-- TemplateBeginEditable name="PageSetup" -->
+	<div data-role="page" id="xxxxxxxxxxxxx">
+	<!-- TemplateEndEditable -->
+	
+		<!-- TemplateBeginEditable name="HeaderContainer" --><!-- TemplateEndEditable -->	
+		
+		<div role="main" class="ui-content">
+			<!-- TemplateBeginEditable name="Content" -->Content<!-- TemplateEndEditable -->
+		</div>
+		
+	<!-- TemplateBeginEditable name="Panel" -->
+	
+	<!-- TemplateEndEditable -->
+		
+		
+	</div>
+
+
+</body>
+</html>

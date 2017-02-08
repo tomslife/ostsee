@@ -1,0 +1,4 @@
+<div role="main" class="ui-content">
+	<div id="uMap" class="googleMap"></div>
+	<img src="../images/buttons/mapLocateMe.png" class="mapLocateMe button" id="uMapLocateMe">
+</div>

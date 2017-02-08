@@ -1,0 +1,44 @@
+.infoBox {
+	}
+
+.infoBox div {
+	margin-bottom: 14px; 
+	background:#fff; 
+	padding: 8px; 
+	border-radius:20px;	
+	}
+	
+.infoBoxAnchor {
+	display:table;
+	width:100%;
+	color:#000;
+	}
+	
+.infoBoxIcon {
+	display:table-cell;
+	vertical-align:middle;
+	}
+
+.infoBoxIcon img {
+	width:36px; height:42px;
+	}
+
+.infoBoxText {
+	display:table-cell;
+	padding-left:8px;
+	vertical-align:middle; text-align:left;
+	text-transform:uppercase;
+	color:#000; font-weight:100; font-size:14px;
+	}
+
+.infoBoxArrow {
+	display:table-cell;
+	vertical-align:middle; padding-top:3px;
+	text-align:right;
+	}
+
+.infoBoxArrow .material-icons {
+	text-align:right;
+	margin:0 !important; padding:0 !important;
+	font-size:36px;
+	}

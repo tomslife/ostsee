@@ -1,0 +1,40 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<div id="panel" data-role="panel" data-theme="b" data-display="overlay">
+
+	<div id="smallPanel">
+			<img src="../images/buttons/openPanelNeu.png" id="tapOpenPanel">
+			<img src="../images/buttons/closePanelNeu.png" id="tapClosePanel">
+		<ul class="">
+			<li>
+				<div id="panelCat2" class="panelCatIconContainer bg2 button"><img src="../images/icons/icon_2.png"></div>
+				<div class="panelCatTextContainer fontColorA uppercase">Strände</div>
+			</li>
+			<li>
+				<div id="panelCat3" class="panelCatIconContainer bg3 button"><img src="../images/icons/icon_3.png"></div>
+				<div class="panelCatTextContainer fontColorA uppercase">Restaurants</div>
+			</li>
+			<li>
+				<div id="panelCat4" class="panelCatIconContainer bg4 button"><img src="../images/icons/icon_4.png"></div>
+				<div class="panelCatTextContainer fontColorA uppercase">Kinder</div>
+			</li>
+			<li>
+				<div id="panelCat5" class="panelCatIconContainer bg5 button"><img src="../images/icons/icon_5.png"></div>
+				<div class="panelCatTextContainer fontColorA uppercase">Ausflugstipps</div>
+			</li>
+			<li>
+				<div id="panelCat6" class="panelCatIconContainer bg6 button"><img src="../images/icons/icon_6.png"></div>
+				<div class="panelCatTextContainer fontColorA uppercase">Lieblingsplätze</div>
+			</li>
+			<li>
+				<div id="panelCat7" class="panelCatIconContainer bg7 button"><img src="../images/icons/icon_7.png"></div>
+				<div class="panelCatTextContainer fontColorA uppercase">Parkplätze</div>
+			</li>
+			<li>
+				<div id="panelCat8" class="panelCatIconContainer bg8 button"><img src="../images/icons/icon_8.png"></div>
+				<div class="panelCatTextContainer fontColorA uppercase">Tourist-Info</div>
+			</li>
+		</ul>
+	</div>
+	
+</div>

@@ -1,0 +1,12 @@
+/* Content auf 100% Höhe setzen, weil sonst zu kurz */
+#pageVsuche .ui-content {
+	position:absolute; top:77px; right:0; bottom:0; left:0;
+	}
+
+.formSelect {
+	min-height:1.4em; line-height:1.4em; text-align:left; border-radius:5px !important;
+	}
+	
+.formButton {
+	min-height:3em; line-height:3em;
+	}

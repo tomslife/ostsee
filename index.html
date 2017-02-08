@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="de" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>OSTSEE</title>
+<!-- link href="css/theme.min.css" rel="stylesheet" -->
+<link href="css/theme.css" rel="stylesheet">
+<!-- link href="scripts/jqMobile/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" -->
+<link href="scripts/jqMobile/jquery.mobile.structure-1.4.5.css" rel="stylesheet">
+<link href="css/uiChange.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<link href="css/start.css" rel="stylesheet">
+<link href="css/panel.css" rel="stylesheet">
+<link href="css/liste.css" rel="stylesheet">
+<link href="css/karte.css" rel="stylesheet">
+<link href="css/suche.css" rel="stylesheet">
+<link href="css/detail.css" rel="stylesheet">
+<link href="scripts/swiper/css/swiper.min.css" rel="stylesheet">
+<!-- TORO:
+aktuell nicht benötigt
+link href="fonts/genericons/genericons.css" rel="stylesheet" -->
+<script src="cordova.js"></script>
+<script src="scripts/jq/jquery-2.1.4.min.js"></script>
+<script src="scripts/jqMobile/jquery.mobile-1.4.5.min.js"></script>
+<script src="scripts/init.js"></script>
+<script src="scripts/taps.js"></script>
+<script src="scripts/maps.js"></script>
+<script src="scripts/liste.js"></script>
+<script src="scripts/pages.js"></script>
+<script src="scripts/functions.js"></script>
+<script src="scripts/panel.js"></script>
+<script src="scripts/S.js"></script>
+<script src="scripts/U.js"></script>
+<script src="scripts/V.js"></script>
+<script src="scripts/A.js"></script>
+<script src="scripts/I.js"></script>
+<script src="scripts/D.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnSXjHsRH9BlySfVfI1l6P9ceogdkhypk&callback=initMaps"></script>
+<!-- Foto Swiper -->
+<!-- script src="scripts/swiper/js/swiper.jquery.min.js"></script -->
+<!-- Retina Replacer - http://imulus.github.io/retinajs/ -->
+<!-- script src="scripts/retina/retina.min.js"></script -->
+</head>
+
+<body>
+
+<!-- INDEX -->
+<div data-role="page" id="pageIndex"><!-- #BeginLibraryItem "/Library/index.lbi" --><div role="main" class="ui-content">
+	<div id="startContainer" data-position="fixed">
+<a href="#pageSettings" id="tapSettings" data-transition="slide"><i class="material-icons button fontColorA">info_outline</i></a>
+		<ul class="fontColorA fontSizeA">
+			<a id="tapUrlaubsorte">
+			<li>
+				<div class="button"><span></span><img src="images/buttons/start_U_icon.png"></div>
+				<p class="fontColorA uppercase">Urlaubsorte</p>
+			</li>
+			</a> <a id="tapVeranstaltungen">
+			<li>
+				<div class="button"><span></span><img src="images/buttons/start_V_icon.png"></div>
+				<p class="fontColorA uppercase">Veranstaltungen</p>
+			</li>
+			</a> <a id="tapAusflugstipps">
+			<li>
+				<div class="button"><span></span><img src="images/buttons/start_A_icon.png"></div>
+				<p class="fontColorA uppercase">Ausflugstipps</p>
+			</li>
+			</a> <a id="tapInDerNahe">
+			<li>
+				<div class="button"><span></span><img src="images/buttons/start_I_icon.png"></div>
+				<p class="fontColorA uppercase">In der N&auml;he</p>
+			</li>
+			</a>
+		</ul>
+	</div>
+</div>
+
+<img src="" id="sectionImagePreloaderU" style="display:none;">
+<img src="" id="sectionImagePreloaderV" style="display:none;">
+<img src="" id="sectionImagePreloaderA" style="display:none;">
+<!-- #EndLibraryItem --></div>
+
+<!-- URLAUBSORTE KARTE -->
+<div data-role="page" id="pageUkarte" class="viewIsMap"><!-- #BeginLibraryItem "/Library/header.lbi" --><div data-role="header" data-position="fixed" data-tap-toggle="false" data-add-back-btn="true">
+	<a data-rel="back" class="headerButton tapBack button"></a>
+
+	<h1>
+		<div class="headerSwitch">
+			<ul class="headerSwitch_ul">
+				<li class="tapKarte button">Karte</li>
+				<li class="tapListe button">Liste</li>	
+			</ul>
+		</div>
+		
+		<!-- Header-Logo für Settings / Impressum -->
+		<img src="images/icons/logo-ostsee-white-ul.svg" class="headerLogo">
+
+		<!-- div class="headerSearch">
+			<a href="#pageVsuche"><img src="../images/icons/iconSucheLupe_weiss.png"></a>
+		</div -->
+
+	</h1>
+	<a class="headerButton tapHome button"></a>
+</div>
+
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Ukarte.lbi" --><div role="main" class="ui-content">
+	<div id="uMap" class="googleMap"></div>
+	<img src="images/buttons/mapLocateMe.png" class="mapLocateMe button" id="uMapLocateMe">
+</div>
+<!-- #EndLibraryItem --></div>
+
+<!-- URLAUBSORTE LISTE -->
+<div data-role="page" id="pageUliste" class="viewIsList"><!-- #BeginLibraryItem "/Library/header.lbi" --><div data-role="header" data-position="fixed" data-tap-toggle="false" data-add-back-btn="true">
+	<a data-rel="back" class="headerButton tapBack button"></a>
+
+	<h1>
+		<div class="headerSwitch">
+			<ul class="headerSwitch_ul">
+				<li class="tapKarte button">Karte</li>
+				<li class="tapListe button">Liste</li>	
+			</ul>
+		</div>
+		
+		<!-- Header-Logo für Settings / Impressum -->
+		<img src="images/icons/logo-ostsee-white-ul.svg" class="headerLogo">
+
+		<!-- div class="headerSearch">
+			<a href="#pageVsuche"><img src="../images/icons/iconSucheLupe_weiss.png"></a>
+		</div -->
+
+	</h1>
+	<a class="headerButton tapHome button"></a>
+</div>
+
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Uliste.lbi" --><div role="main" class="ui-content">
+	<div class="sektionFoto">Urlaubsorte -<br>einfach schön hier</div>
+	<ul id="listviewU" data-role="listview" class="listview" data-icon="false">
+	</ul>
+</div>
+<!-- #EndLibraryItem --></div>
+
+<!-- VERANSTALTUNGEN LISTE -->
+<div data-role="page" id="pageVliste" class="viewIsList noHeadline"><!-- #BeginLibraryItem "/Library/header.lbi" --><div data-role="header" data-position="fixed" data-tap-toggle="false" data-add-back-btn="true">
+	<a data-rel="back" class="headerButton tapBack button"></a>
+
+	<h1>
+		<div class="headerSwitch">
+			<ul class="headerSwitch_ul">
+				<li class="tapKarte button">Karte</li>
+				<li class="tapListe button">Liste</li>	
+			</ul>
+		</div>
+		
+		<!-- Header-Logo für Settings / Impressum -->
+		<img src="images/icons/logo-ostsee-white-ul.svg" class="headerLogo">
+
+		<!-- div class="headerSearch">
+			<a href="#pageVsuche"><img src="../images/icons/iconSucheLupe_weiss.png"></a>
+		</div -->
+
+	</h1>
+	<a class="headerButton tapHome button"></a>
+</div>
+
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Vliste.lbi" --><div role="main" class="ui-content">
+
+	<!--
+	<div class="listeHeadlineTable ui-bar">
+		<div class="listeHeadlineTableCell">
+			<h1 class="listeHeadlineText uppercase fontColor9">Veranstaltungen -<br>die tollsten Events</h1>
+		</div>
+		<div class="listeHeadlineTableCell">
+			<a href="#pageVsuche"><img class="listeHeadlineImage" src="images/icons/iconSucheLupe.png"></a>
+		</div>
+	</div> -->
+	
+	<div class="sektionFoto">Veranstaltungen - <br>die tollsten Events</div>
+
+	<ul id="listviewV" data-role="listview" class="listview" data-theme="b" data-icon="false">
+	</ul>
+</div>
+<!-- #EndLibraryItem --></div>
+
+<!-- VERANSTALTUNGEN SUCHE --> 
+<div data-role="page" id="pageVsuche" class="noHeadline"><!-- #BeginLibraryItem "/Library/header.lbi" --><div data-role="header" data-position="fixed" data-tap-toggle="false" data-add-back-btn="true">
+	<a data-rel="back" class="headerButton tapBack button"></a>
+
+	<h1>
+		<div class="headerSwitch">
+			<ul class="headerSwitch_ul">
+				<li class="tapKarte button">Karte</li>
+				<li class="tapListe button">Liste</li>	
+			</ul>
+		</div>
+		
+		<!-- Header-Logo für Settings / Impressum -->
+		<img src="images/icons/logo-ostsee-white-ul.svg" class="headerLogo">
+
+		<!-- div class="headerSearch">
+			<a href="#pageVsuche"><img src="../images/icons/iconSucheLupe_weiss.png"></a>
+		</div -->
+
+	</h1>
+	<a class="headerButton tapHome button"></a>
+</div>
+
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Vsuche.lbi" --><div role="main" class="ui-content bg9" data-theme="c"> 
+
+<div data-theme="c" class="ui-body">
+	<form>
+	
+	
+			<label for="datumVon" class="ui-hidden-accessible">Von</label><input type="text" data-theme="i" name="datumVon" placeholder="Von" ontouchstart="(this.type='date')">
+			<label for="datumBis" class="ui-hidden-accessible">bis</label><input type="text" data-theme="i" name="datumBis" placeholder="bis" ontouchstart="(this.type='date')">
+		
+			
+				<label for="eventTyp" class="select ui-hidden-accessible">Event-Typ</label>
+<select name="eventTyp" id="eventTyp2" data-theme="j" data-native-menu="true" class="formSelect">
+    <option value="standard">Alle Events</option>
+    <option value="rush">Familie</option>
+    <option value="express">Feste</option>
+    <option value="overnight">Konzerte</option>
+    <option value="overnight">Lesungen</option>
+    <option value="overnight">Natur</option>
+</select>
+
+				<label for="eventOrte" class="select ui-hidden-accessible">Orte</label>
+<select name="eventOrte" id="eventOrte" data-theme="j" data-native-menu="true" class="formSelect">
+    <option value="standard">Alle Städte und Regionen</option>
+    <option value="rush">Eckernförder Bucht</option>
+    <option value="express">Fehmarn</option>
+    <option value="overnight">Flensburg Fjord</option>
+    <option value="overnight">Halbinsel Schwansen</option>
+    <option value="overnight">Hohwachter Bucht</option>
+    <option value="overnight">Holsteinische Schweiz</option>
+    <option value="overnight">Lübecker Bucht</option>
+    <option value="overnight">OstseeFerienland</option>
+    <option value="overnight">OstseeSpitze & Großebrode</option>
+    <option value="overnight">Probstei & Kieler Förde</option>
+</select>
+
+	<a href="#pageVliste" class="ui-btn ui-corner-all ui-btn-j formButton">SUCHEN</a>
+	
+	</form>
+	
+	</div>
+
+</div><!-- #EndLibraryItem --></div>
+
+<!-- AUSFLUGSTIPPS LISTE -->
+<div data-role="page" id="pageAliste" class="viewIsList"><!-- #BeginLibraryItem "/Library/header.lbi" --><div data-role="header" data-position="fixed" data-tap-toggle="false" data-add-back-btn="true">
+	<a data-rel="back" class="headerButton tapBack button"></a>
+
+	<h1>
+		<div class="headerSwitch">
+			<ul class="headerSwitch_ul">
+				<li class="tapKarte button">Karte</li>
+				<li class="tapListe button">Liste</li>	
+			</ul>
+		</div>
+		
+		<!-- Header-Logo für Settings / Impressum -->
+		<img src="images/icons/logo-ostsee-white-ul.svg" class="headerLogo">
+
+		<!-- div class="headerSearch">
+			<a href="#pageVsuche"><img src="../images/icons/iconSucheLupe_weiss.png"></a>
+		</div -->
+
+	</h1>
+	<a class="headerButton tapHome button"></a>
+</div>
+
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Aliste.lbi" --><div role="main" class="ui-content">
+
+	<!--
+	<div class="listeHeadlineTable ui-bar">
+		<div class="listeHeadlineTableCell">
+			<h1 class="listeHeadlineText uppercase fontColor5">Ausflugstipps -<br>die schönsten Ziele</h1>
+		</div>
+		<div class="listeHeadlineTableCell">
+			<a href="#pageVsuche"><img class="listeHeadlineImage" src="images/icons/iconSucheLupe.png"></a>
+		</div>
+	</div> -->
+	
+	<div class="sektionFoto">Ausflugstipps - <br>die schönsten Ziele</div>
+
+	<ul id="listviewA" data-role="listview" class="listview" data-theme="e" data-icon="false">
+	</ul>
+
+</div>
+<!-- #EndLibraryItem --></div>
+
+<!-- AUSFLUGSTIPPS KARTE --> 
+<div data-role="page" id="pageAkarte" class="viewIsMap"><!-- #BeginLibraryItem "/Library/header.lbi" --><div data-role="header" data-position="fixed" data-tap-toggle="false" data-add-back-btn="true">
+	<a data-rel="back" class="headerButton tapBack button"></a>
+
+	<h1>
+		<div class="headerSwitch">
+			<ul class="headerSwitch_ul">
+				<li class="tapKarte button">Karte</li>
+				<li class="tapListe button">Liste</li>	
+			</ul>
+		</div>
+		
+		<!-- Header-Logo für Settings / Impressum -->
+		<img src="images/icons/logo-ostsee-white-ul.svg" class="headerLogo">
+
+		<!-- div class="headerSearch">
+			<a href="#pageVsuche"><img src="../images/icons/iconSucheLupe_weiss.png"></a>
+		</div -->
+
+	</h1>
+	<a class="headerButton tapHome button"></a>
+</div>
+
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Akarte.lbi" --><div role="main" class="ui-content">
+	<div id="aMap" class="googleMap"></div>
+	<img src="images/buttons/mapLocateMe.png" class="mapLocateMe button" id="aMapLocateMe">
+</div>
+<!-- #EndLibraryItem --></div>
+
+<!-- IN DER NÄHE KARTE -->
+<div data-role="page" id="pageIkarte" class="viewIsMap viewHasPanel"><!-- #BeginLibraryItem "/Library/header.lbi" --><div data-role="header" data-position="fixed" data-tap-toggle="false" data-add-back-btn="true">
+	<a data-rel="back" class="headerButton tapBack button"></a>
+
+	<h1>
+		<div class="headerSwitch">
+			<ul class="headerSwitch_ul">
+				<li class="tapKarte button">Karte</li>
+				<li class="tapListe button">Liste</li>	
+			</ul>
+		</div>
+		
+		<!-- Header-Logo für Settings / Impressum -->
+		<img src="images/icons/logo-ostsee-white-ul.svg" class="headerLogo">
+
+		<!-- div class="headerSearch">
+			<a href="#pageVsuche"><img src="../images/icons/iconSucheLupe_weiss.png"></a>
+		</div -->
+
+	</h1>
+	<a class="headerButton tapHome button"></a>
+</div>
+
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Ikarte.lbi" --><div role="main" class="ui-content" id="test">
+	<div id="iMap" class="googleMap googleMapWithPanel"></div>
+	<img src="images/buttons/mapLocateMe.png" class="mapLocateMe button" id="iMapLocateMe">
+</div>
+<!-- #EndLibraryItem --></div>
+
+<!-- IN DER NÄHE LISTE -->
+<div data-role="page" id="pageIliste" class="viewIsList viewHasPanel"><!-- #BeginLibraryItem "/Library/header.lbi" --><div data-role="header" data-position="fixed" data-tap-toggle="false" data-add-back-btn="true">
+	<a data-rel="back" class="headerButton tapBack button"></a>
+
+	<h1>
+		<div class="headerSwitch">
+			<ul class="headerSwitch_ul">
+				<li class="tapKarte button">Karte</li>
+				<li class="tapListe button">Liste</li>	
+			</ul>
+		</div>
+		
+		<!-- Header-Logo für Settings / Impressum -->
+		<img src="images/icons/logo-ostsee-white-ul.svg" class="headerLogo">
+
+		<!-- div class="headerSearch">
+			<a href="#pageVsuche"><img src="../images/icons/iconSucheLupe_weiss.png"></a>
+		</div -->
+
+	</h1>
+	<a class="headerButton tapHome button"></a>
+</div>
+
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Iliste.lbi" --><div role="main" class="ui-content">
+
+	<ul id="listviewI" data-role="listview" class="listview" data-icon="false">
+	</ul>
+
+
+</div>
+<!-- #EndLibraryItem --></div>
+
+<!-- DETAIL VIEW -->
+<div data-role="page" id="pageDetail" class="noHeadline"><!-- #BeginLibraryItem "/Library/header.lbi" --><div data-role="header" data-position="fixed" data-tap-toggle="false" data-add-back-btn="true">
+	<a data-rel="back" class="headerButton tapBack button"></a>
+
+	<h1>
+		<div class="headerSwitch">
+			<ul class="headerSwitch_ul">
+				<li class="tapKarte button">Karte</li>
+				<li class="tapListe button">Liste</li>	
+			</ul>
+		</div>
+		
+		<!-- Header-Logo für Settings / Impressum -->
+		<img src="images/icons/logo-ostsee-white-ul.svg" class="headerLogo">
+
+		<!-- div class="headerSearch">
+			<a href="#pageVsuche"><img src="../images/icons/iconSucheLupe_weiss.png"></a>
+		</div -->
+
+	</h1>
+	<a class="headerButton tapHome button"></a>
+</div>
+
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/detail.lbi" --><div role="main" class="ui-content"> 
+
+	<!-- Slider main container -->
+	<div class="swiper-container"> 
+		<!-- Additional required wrapper -->
+
+		<div class="swiper-wrapper"> 
+			<!-- DYNAMISCH REINGELADENE FOTOS -->
+		</div>
+		
+		<!-- div class="prevButton"><</div>
+		<div class="nextButton">></div -->
+	</div>
+
+	<div class="detailHeadlineContainer">
+	
+		<div class="detailHeadlineTableCell">		
+			<h1 class="detailHeadlineH1 fontColorA fontFormatPoiName uppercase"><!-- HEADLINE --></h1>
+			<p id="detailSubHeadline" class="fontColorA fontSizeA"><!-- SUB HEADLINE --></p>
+		</div>
+		
+		<div class="detailHeadlineTableCell">
+			<img class="detailHeadlineIcon"> 
+		</div>
+		
+	</div>
+	
+	<div id="detailContentContainer" class="ui-body">
+
+		<ul id="detailPOIlinks">
+			<li class="bg2"><div class="button"><a href="javascript:showMarkersAroundPosition(2);"><img src="images/icons/icon_2.png"></a></div></li>
+			<a href="javascript:showMarkersAroundPosition(3);" class="button"><li class="bg3"><img src="images/icons/icon_3.png"></li></a>
+			<a href="javascript:showMarkersAroundPosition(4);" class="button"><li class="bg4"><img src="images/icons/icon_4.png"></li></a>
+		</ul>
+
+		<div id="detailPOIdescription" class="fontSizeC"></div>
+		
+		<div id="detailPOIaddress" class="fontSizeC"></div>
+		
+		<div id="detailPOIbuttons">
+			<a href="" id="detailPOIrouteURL" class="detailPOIbutton fontSizeA button" target="_system"><i class="material-icons button fontColorA">arrow_forward</i><br>Route</a>
+			<a href="" id="detailPOIcallNumber" class="detailPOIbutton fontSizeA button" target="_system"><i class="material-icons button fontColorA">call</i><br>Anrufen</a>
+		</div>
+	
+	
+	</div>
+
+</div><!-- #EndLibraryItem --></div>
+
+<!-- SETTINGS -->
+<div data-role="page" id="pageSettings" class="noHeadline"><!-- #BeginLibraryItem "/Library/header.lbi" --><div data-role="header" data-position="fixed" data-tap-toggle="false" data-add-back-btn="true">
+	<a data-rel="back" class="headerButton tapBack button"></a>
+
+	<h1>
+		<div class="headerSwitch">
+			<ul class="headerSwitch_ul">
+				<li class="tapKarte button">Karte</li>
+				<li class="tapListe button">Liste</li>	
+			</ul>
+		</div>
+		
+		<!-- Header-Logo für Settings / Impressum -->
+		<img src="images/icons/logo-ostsee-white-ul.svg" class="headerLogo">
+
+		<!-- div class="headerSearch">
+			<a href="#pageVsuche"><img src="../images/icons/iconSucheLupe_weiss.png"></a>
+		</div -->
+
+	</h1>
+	<a class="headerButton tapHome button"></a>
+</div>
+
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/settings.lbi" --><div role="main" class="ui-content">
+
+	<div id="detailContentContainer" class="ui-body settings">
+		<h2>Impressum</h2>
+		<p><strong>Inhaltlich Verantwortlicher:</strong><br>
+		Ostsee-Holstein-Tourismus e.V.<br>
+		Am Bürgerhaus 2<br>
+		23683 Scharbeutz<br>
+		Deutschland</p>
+		
+		<p>Service-Telefon: <a href="tel:+4904503888525">+49 (0) 45 03 – 888 525</a><br>
+		E-Mail: <a href="mailto:info@ostsee-sh.de">info@ostsee-sh.de</a>
+		</p>
+
+		<p><strong>Geschäftsführerin:</strong><br>
+		Katja Lauritzen</p>
+		
+		<p><strong>Steuernummer:</strong><br>
+			FA Lübeck 22.296.26032<br>
+		</p>
+
+		<p><strong>Handelsregister:</strong><br>
+		Amtsgericht Lübeck, VR 1097<br>
+		Firmensitz: 23683 Scharbeutz</p>
+		</p>
+		
+		
+		<p><strong>Gestaltung & Entwicklung:</strong><br>
+		WEISS&KOHNEN - Agentur für Dialogmarketing GmbH<br>
+		St. Annenufer 2, III. Boden<br>
+		D-20457 Hamburg<br>
+		Web: <a href="http://www.weiss-kohnen.de" target="_blank">www.weiss-kohnen.de</a>
+		</p>
+	</div>
+</div><!-- #EndLibraryItem --></div>
+
+<!-- PANEL --><!-- #BeginLibraryItem "/Library/panel.lbi" -->
+
+<div id="panel" data-role="panel" data-theme="b" data-display="overlay">
+
+	<div id="smallPanel">
+			<img src="images/buttons/openPanelNeu.png" id="tapOpenPanel">
+			<img src="images/buttons/closePanelNeu.png" id="tapClosePanel">
+		<ul class="">
+			<li>
+				<div id="panelCat2" class="panelCatIconContainer bg2 button"><img src="images/icons/icon_2.png"></div>
+				<div class="panelCatTextContainer fontColorA uppercase">Strände</div>
+			</li>
+			<li>
+				<div id="panelCat3" class="panelCatIconContainer bg3 button"><img src="images/icons/icon_3.png"></div>
+				<div class="panelCatTextContainer fontColorA uppercase">Restaurants</div>
+			</li>
+			<li>
+				<div id="panelCat4" class="panelCatIconContainer bg4 button"><img src="images/icons/icon_4.png"></div>
+				<div class="panelCatTextContainer fontColorA uppercase">Kinder</div>
+			</li>
+			<li>
+				<div id="panelCat5" class="panelCatIconContainer bg5 button"><img src="images/icons/icon_5.png"></div>
+				<div class="panelCatTextContainer fontColorA uppercase">Ausflugstipps</div>
+			</li>
+			<li>
+				<div id="panelCat6" class="panelCatIconContainer bg6 button"><img src="images/icons/icon_6.png"></div>
+				<div class="panelCatTextContainer fontColorA uppercase">Lieblingsplätze</div>
+			</li>
+			<li>
+				<div id="panelCat7" class="panelCatIconContainer bg7 button"><img src="images/icons/icon_7.png"></div>
+				<div class="panelCatTextContainer fontColorA uppercase">Parkplätze</div>
+			</li>
+			<li>
+				<div id="panelCat8" class="panelCatIconContainer bg8 button"><img src="images/icons/icon_8.png"></div>
+				<div class="panelCatTextContainer fontColorA uppercase">Tourist-Info</div>
+			</li>
+		</ul>
+	</div>
+	
+</div><!-- #EndLibraryItem --></body>
+</html>

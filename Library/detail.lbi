@@ -1,0 +1,48 @@
+<div role="main" class="ui-content"> 
+
+	<!-- Slider main container -->
+	<div class="swiper-container"> 
+		<!-- Additional required wrapper -->
+
+		<div class="swiper-wrapper"> 
+			<!-- DYNAMISCH REINGELADENE FOTOS -->
+		</div>
+		
+		<!-- div class="prevButton"><</div>
+		<div class="nextButton">></div -->
+	</div>
+
+	<div class="detailHeadlineContainer">
+	
+		<div class="detailHeadlineTableCell">		
+			<h1 class="detailHeadlineH1 fontColorA fontFormatPoiName uppercase"><!-- HEADLINE --></h1>
+			<p id="detailSubHeadline" class="fontColorA fontSizeA"><!-- SUB HEADLINE --></p>
+		</div>
+		
+		<div class="detailHeadlineTableCell">
+			<img class="detailHeadlineIcon"> 
+		</div>
+		
+	</div>
+	
+	<div id="detailContentContainer" class="ui-body">
+
+		<ul id="detailPOIlinks">
+			<li class="bg2"><div class="button"><a href="javascript:showMarkersAroundPosition(2);"><img src="../images/icons/icon_2.png"></a></div></li>
+			<a href="javascript:showMarkersAroundPosition(3);" class="button"><li class="bg3"><img src="../images/icons/icon_3.png"></li></a>
+			<a href="javascript:showMarkersAroundPosition(4);" class="button"><li class="bg4"><img src="../images/icons/icon_4.png"></li></a>
+		</ul>
+
+		<div id="detailPOIdescription" class="fontSizeC"></div>
+		
+		<div id="detailPOIaddress" class="fontSizeC"></div>
+		
+		<div id="detailPOIbuttons">
+			<a href="" id="detailPOIrouteURL" class="detailPOIbutton fontSizeA button" target="_system"><i class="material-icons button fontColorA">arrow_forward</i><br>Route</a>
+			<a href="" id="detailPOIcallNumber" class="detailPOIbutton fontSizeA button" target="_system"><i class="material-icons button fontColorA">call</i><br>Anrufen</a>
+		</div>
+	
+	
+	</div>
+
+</div>

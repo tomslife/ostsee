@@ -1,0 +1,17 @@
+<div role="main" class="ui-content">
+
+	<!--
+	<div class="listeHeadlineTable ui-bar">
+		<div class="listeHeadlineTableCell">
+			<h1 class="listeHeadlineText uppercase fontColor9">Veranstaltungen -<br>die tollsten Events</h1>
+		</div>
+		<div class="listeHeadlineTableCell">
+			<a href="#pageVsuche"><img class="listeHeadlineImage" src="images/icons/iconSucheLupe.png"></a>
+		</div>
+	</div> -->
+	
+	<div class="sektionFoto">Veranstaltungen - <br>die tollsten Events</div>
+
+	<ul id="listviewV" data-role="listview" class="listview" data-theme="b" data-icon="false">
+	</ul>
+</div>

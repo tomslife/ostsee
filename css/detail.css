@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* FOTO SWIPER */
+.swiper-container {width: auto; height: 240px;}
+.swiper-slide {background-repeat:no-repeat; background-size:cover;}
+.prevButton, .nextButton {position:absolute; z-index:50; top:100px; color:#ccc; font-size:24px; cursor:pointer;}
+.prevButton {left: 10px;}
+.nextButton {right:10px;}
+
+.detailHeadlineContainer {
+	display:table; min-height:66px; width:100%; box-sizing:border-box !important;
+	}
+
+.detailHeadlineTableCell {
+	display:table-cell; vertical-align:middle; padding:0 10px;
+	}
+
+.detailHeadlineH1 {
+	padding:0; margin:0; 
+	}
+	
+#detailSubHeadline { font-size:0.75rem;	}
+
+.detailHeadlineIcon {
+	display:inline-block; float:right; border:1px solid #fff !important; padding:6px !important; border-radius:50% !important; width:31px; height:31px;
+}
+
+#detailPOIlinks {display:inline-block; padding:10px 0;}
+#detailPOIlinks li {float:left; height:48px; width:48px; border-radius:50px; text-align:center; line-height:46px; margin-right:10px;}
+#detailPOIlinks li img {display:inline-block;vertical-align:middle; width:31px; height:31px;}
+
+#detailContentContainer {
+	padding:10px 10px 20px;
+	}
+
+#detailPOIaddress {
+	margin:15px 0 5px; padding:10px 0; border-top:1px solid #ccc;
+	}
+
+.detailPOIbutton {
+	text-align:center; display:inline-block; margin-right:10px; color:#505050 !important; text-transform:uppercase; font-size:0.7rem; font-weight:normal;
+	}
+
+#detailPOIbuttons i {
+	background-color:#505050; padding:10px; border-radius:50%; margin-bottom:5px;
+	}

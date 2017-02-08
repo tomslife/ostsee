@@ -1,0 +1,18 @@
+<div role="main" class="ui-content">
+
+	<!--
+	<div class="listeHeadlineTable ui-bar">
+		<div class="listeHeadlineTableCell">
+			<h1 class="listeHeadlineText uppercase fontColor5">Ausflugstipps -<br>die schönsten Ziele</h1>
+		</div>
+		<div class="listeHeadlineTableCell">
+			<a href="#pageVsuche"><img class="listeHeadlineImage" src="images/icons/iconSucheLupe.png"></a>
+		</div>
+	</div> -->
+	
+	<div class="sektionFoto">Ausflugstipps - <br>die schönsten Ziele</div>
+
+	<ul id="listviewA" data-role="listview" class="listview" data-theme="e" data-icon="false">
+	</ul>
+
+</div>
