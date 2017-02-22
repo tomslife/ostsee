@@ -1,5 +1,3 @@
-var GeoMarker;
-
 // Karten initialisieren, wird als Callback direkt nach Laden der Google Maps API aufgerufen
 function initMaps() {
 	
@@ -73,11 +71,10 @@ function getUserPosition(whichMap, forcePan) {
 			sortPOIarray(lat, lng, lat, lng, 0);
 			
 			// Blauen Userposition Marker für alle Karten aktivieren
-			GeoMarkerU = new GeolocationMarker;
-			GeoMarkerU.setMap(uMap);
-			var GeoMarkerA = new GeolocationMarker(aMap);
-			var GeoMarkerI = new GeolocationMarker(iMap);
-			var GeoMarkerO = new GeolocationMarker(oMap);
+			var GeoMarker = new GeolocationMarker(uMap);
+			var GeoMarker = new GeolocationMarker(aMap);
+			var GeoMarker = new GeolocationMarker(iMap);
+			var GeoMarker = new GeolocationMarker(oMap);
 			
 			// UserPosition als GoogleMaps Konstruktor sichern
 			var pos = new google.maps.LatLng(sessionStorage.userLocationLat, sessionStorage.userLocationLng);
