@@ -12,5 +12,8 @@ b.f=function(a){google.maps.MVCObject.prototype.set.call(this,"map",a);a?navigat
 b.s=function(a){this.a.setOptions(h({},a))};
 b.A=function(a){var c=new google.maps.LatLng(a.coords.latitude,a.coords.longitude),e=null==this.b.getMap();if(e){if(null!=this.h()&&a.coords.accuracy>this.h())return;this.b.setMap(this.i());this.b.bindTo("position",this);this.a.bindTo("center",this,"position");this.a.bindTo("radius",this,"accuracy")}this.j()!=a.coords.accuracy&&google.maps.MVCObject.prototype.set.call(this,"accuracy",a.coords.accuracy);!e&&null!=this.c()&&this.c().equals(c)||google.maps.MVCObject.prototype.set.call(this,"position",
 c)};b.o=function(a){google.maps.event.trigger(this,"geolocation_error",a)};function h(a,c){for(var e in c)!0!==l[e]&&(a[e]=c[e]);return a}var l={map:!0,position:!0,radius:!0},k=/^(?:position|accuracy)$/i;function m(){g.prototype.getAccuracy=g.prototype.j;g.prototype.getBounds=g.prototype.m;g.prototype.getMap=g.prototype.i;g.prototype.getMinimumAccuracy=g.prototype.h;g.prototype.getPosition=g.prototype.c;g.prototype.getPositionOptions=g.prototype.l;g.prototype.setCircleOptions=g.prototype.s;g.prototype.setMap=g.prototype.f;g.prototype.setMarkerOptions=g.prototype.u;g.prototype.setMinimumAccuracy=g.prototype.v;g.prototype.setPositionOptions=g.prototype.w;return g}
-"function"===typeof this.define&&this.define.amd?this.define([],m):"object"===typeof this.exports?this.module.exports=m():this.GeolocationMarker=m();}).call(this)
+/* ORIGINAL:
+"function"===typeof this.define&&this.define.amd?this.define([],m):"object"===typeof this.exports?this.module.exports=m():this.GeolocationMarker=m();}).call(this) */
+/* TORO EDIT: */
+this.GeolocationMarker=m();}).call(this)
 //# sourceMappingURL=geolocation-marker.js.map
