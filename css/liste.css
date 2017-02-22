@@ -18,7 +18,7 @@ a {text-decoration:none;}
 #pageIliste .listviewTable {
 	padding-left:60px;
 	}
-	
+
 .listviewTableCell {
 	display:table-cell; vertical-align:middle; padding:5px 0;
 	}
@@ -98,6 +98,11 @@ a {text-decoration:none;}
 
 /* Kein Border für erste Ergebnis-Zeile der V-Liste, weil Ortsfilter oben und unten Border bekommt */
 #pageVliste .listview .ui-first-child .ui-btn {
+	border-width: 0 !important;
+}
+
+/* Kein Border für erste Ergebnis-Zeile der I-Liste, weil sie direkt an Header grenzt */
+#pageIliste .listview .ui-first-child .ui-btn {
 	border-width: 0 !important;
 }
 
