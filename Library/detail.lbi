@@ -38,8 +38,9 @@
 		<div id="detailPOIaddress" class="fontSizeC"></div>
 		
 		<div id="detailPOIbuttons">
-			<a href="" id="detailPOIrouteURL" class="detailPOIbutton fontSizeA button" target="_system"><i class="material-icons button fontColorA">arrow_forward</i><br>Route</a>
+			<a href="" id="detailPOIrouteURL" class="detailPOIbutton fontSizeA button" target="_system"><i class="material-icons button fontColorA">near_me</i><br>Route</a>
 			<a href="" id="detailPOIcallNumber" class="detailPOIbutton fontSizeA button" target="_system"><i class="material-icons button fontColorA">call</i><br>Anrufen</a>
+			<a href="" id="detailPOIwebURL" class="detailPOIbutton fontSizeA button" target="_system"><i class="material-icons button fontColorA">exit_to_app</i><br>Website</a>
 		</div>
 	
 	

@@ -37,7 +37,7 @@ function onDeviceReady() {
 			$("#detailPOIlinks").hide();
 		}
 	
-		if (detailKategorie == 9) {
+		if (detailKategorie == 10) {
 			
 			$("#detailPOIaddress").hide();
 			$("#detailPOIbuttons").hide();
@@ -48,17 +48,32 @@ function onDeviceReady() {
 				var detailImageURL = "http:" + data.image;
 				var detailDescription = data.description;
 				var detailOrt = data.contact.city;
-				var detailDatum = sessionStorage.detailDatum;
-				
-				// alert(detailImageURL);
-				
+				var detailTimestamp = sessionStorage.detailTimestamp;
+
 				$(".swiper-wrapper").append('<div class="swiper-slide" style="background-image:url(' + detailImageURL + ')"></div>');
 				$(".detailHeadlineContainer").addClass("bg" + detailKategorie);
-				$(".detailHeadlineIcon").attr("src", "images/icons/icon_9.png");
+				$(".detailHeadlineIcon").attr("src", "images/icons/icon_V.png");
 				$(".detailHeadlineH1").append(detailName);
-				$("#detailSubHeadline").append(detailOrt + " - " + detailDatum);
+				$("#detailSubHeadline").append(detailOrt);
 				$("#detailPOIdescription").append(formatJSONcontent(detailDescription));
-
+				
+				$.each(data.events, function(test, eventdaten) {
+					var jsonTimestampStart = eventdaten.start;
+					var jsonTimestampEnd = eventdaten.end;
+					
+					if (jsonTimestampStart == detailTimestamp) {
+						var detailDatum = timestampToRealDate(jsonTimestampStart);
+						var detailStartzeit = timestampToRealTime(jsonTimestampStart);
+						var detailEndzeit = timestampToRealTime(jsonTimestampEnd);
+						
+						$("#detailSubHeadline").append(" &centerdot; " + detailDatum + " &centerdot; " + detailStartzeit);
+						if (jsonTimestampEnd != null) {
+							$("#detailSubHeadline").append("-" + detailEndzeit);
+						}
+						$("#detailSubHeadline").append(" Uhr");
+						return false;
+					}
+				});
 
 			});
 		}
@@ -139,14 +154,22 @@ function onDeviceReady() {
 							else {
 							}
 	
-							if (daten.phone != null) {
-								if (daten.phone.length >= 1) {
+							if (daten.phone != null && daten.phone.length >= 1) {
 									$("#detailPOIaddress").append('<br>Telefon: ' + daten.phone);
 									$("#detailPOIcallNumber").attr("href", "tel:" + daten.phone);
-								}
 							}
 							else {
 								$("#detailPOIcallNumber").hide();
+							}
+							
+							if (daten.website != null) {
+								if (daten.website.length >= 3) {
+									$("#detailPOIaddress").append('<br>' + daten.website);
+									$("#detailPOIwebURL").attr("href", "http://" + daten.website);
+								}
+								else {
+								$("#detailPOIwebURL").hide();
+								}
 							}
 							
 							// geoURL definieren
@@ -216,6 +239,7 @@ function onDeviceReady() {
 		$("#detailPOIaddress").empty();
 		$("#detailPOIbuttons").show();								
 		$("#detailPOIcallNumber").show();
+		$("#detailPOIwebURL").show();
 		
 		// ID + Kategorie löschen, damit beim "Double-Back" der Ort für die Detailansicht herangezogen wird
 		sessionStorage.detailID = 0;

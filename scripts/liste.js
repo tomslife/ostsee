@@ -1,3 +1,18 @@
+function populateListview(sektion, category) {
+		$.each(POIarray, function(object, daten) {
+				// POI Radius aus den globalen Init-Daten auslesen
+				var poiRadius = sessionStorage.Proximity;
+				// wenn POI Distanz kleiner als POI Radius 
+				if (daten.category == category) {
+					// Funktion: Listview Items erzeugen
+					createListviewItems("#listview" + sektion, daten.id, daten.name, daten.category, daten.userDistance, daten.extension);
+				}
+
+			}); 
+
+		$("#listview" + sektion).listview("refresh");	 	
+}
+
 function createListviewItems(whichListview, id, name, kategorie, distanz, extension, fkk) {
 
 		var theme = getThemeLetter(Number(kategorie));					

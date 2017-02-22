@@ -7,62 +7,7 @@ $(document).ready(function() {
 
 	// BEFORECREATE - 1x
 	$("#pageUkarte").on("pagebeforecreate", function() {
-		
-		populateMap(uMap, 1);
-		
-		/*	
-		// Karte mit Markern bevölkern
-			// Begrenzung (Bounds) der Karte initialisieren
-			uMapBounds = new google.maps.LatLngBounds();
-			// Infobox initialisieren
-			var uInfoBox = new InfoBox(infoBoxOptions);
-			// JSON Daten lesen
-			$.getJSON("json/api-poi.json", function(json) {
-				// JSON Schleife
-				$.each(json, function(object, daten) {		
-					// Kategorie ermitteln
-					var appKategorie = convertKategorie(daten.kategorie);
-					// Wenn Kategorie gleich ORT
-					if (appKategorie == "1") {
-						// Pin-Eigenschaften definieren
-						var image = {
-								url: 'images/pins/' + appKategorie + retinaSuffix + '.png',
-								size: markerSize,
-								scaledSize: new google.maps.Size(36, 42),
-								origin: new google.maps.Point(0,0),
-								anchor: new google.maps.Point(18, 42)
-						};					
-												
-						var marker = new google.maps.Marker({
-						position: new google.maps.LatLng(daten.latitude, daten.longitude),
-						map: uMap,
-						icon: image
-						});
-						// Begrenung der Karte um die Position des aktuellen Markers erweitern
-						uMapBounds.extend(marker.position);
-
-						// Event-Listener für die Marker anlegen, bei Klick...
-						google.maps.event.addListener(marker, 'click', function() {
-							// Karte zur aktuellen Marker-Position bewegen
-							uMap.panTo(this.position);
-							// dem Marker die aktuelle Objekt-ID zufügen
-							sessionStorage.detailID = daten.id;
-							// den Inhalt der Info-Box anpassen
-							boxText.innerHTML = '<a href="#pageDetail" class="infoBoxAnchor"><span class="infoBoxIcon"><img src="images/pins/' + appKategorie + '.png"></span><span class="infoBoxText">' + daten.name + '</span><span class="infoBoxArrow"><i class="material-icons">navigate_next</i></span></a>';
-							// die Info-Box öffnen
-							uInfoBox.open(uMap, this);
-							});
-					}
-				});
-
-				// einzelnen Event-Listener anlegen, bei Klick auf die Karte...
-				google.maps.event.addListener(uMap, 'click', function() {
-					// die Info-Box schließen
-					uInfoBox.close();
-				});
-
-				
-			}); */
+		populateMap(uMap, 1);		
 	});
 
 	// PAGESHOW - Nx
@@ -106,7 +51,7 @@ $(document).ready(function() {
 		}
 
 		// F-Aufruf: Listview mit Daten bevölkern
-		populateListviewU();
+		populateListview("U", "1");
 
 	});
 
@@ -161,21 +106,4 @@ function gotoUkarte() {
 
 function gotoUliste() {
 	$.mobile.changePage("#pageUliste");
-}
-
-function populateListviewU() {
-			
-		$.each(POIarray, function(object, daten) {
-				// POI Radius aus den globalen Init-Daten auslesen
-				var poiRadius = sessionStorage.Proximity;
-				// wenn POI Distanz kleiner als POI Radius 
-				if (daten.category == 1) {
-					// Funktion: Listview Items erzeugen
-					createListviewItems("#listviewU", daten.id, daten.name, daten.category, daten.userDistance, daten.extension);
-				}
-
-		}); // each
-
-		$("#listviewU").listview("refresh");	 	
-
 }

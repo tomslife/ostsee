@@ -4,7 +4,7 @@
 #panel {
 	display:none;
 	position:fixed; top:77px;
-	width:14em; height:100%;
+	width:12em; height:100%;
 	/* background-color:#008a9f; */
 	background-color:#009bb1;
 	padding:0 !important;
@@ -19,7 +19,7 @@
 	}
 
 #panel li {
-	margin-bottom:6px; display:table; table-layout:fixed;
+	margin-bottom:5px; display:table; table-layout:fixed;
 	    -webkit-transition: all 0.1s ease-in;
     -moz-transition: all 0.1s ease-in;
     -o-transition: all 0.1s ease-in;
@@ -35,11 +35,11 @@
 	}
 
 .panelCatIconContainer {
-	display:table-cell; height:41px; width:41px; line-height:38px; border-radius:50%; text-align:center;
+	display:table-cell; height:44px; width:44px; vertical-align:middle; border-radius:50%; text-align:center;
 	}
 
 .panelCatIconContainer img {
-	width:31px; height:31px;
+	width:34px; height:34px;
 	}
 
 #smallPanel img {
@@ -51,11 +51,11 @@
 	}
 
 .panelCatTextContainer {
-	padding-left:10px; text-align:center;
+	padding-left:10px; text-align:center; font-size: 0.8em; line-height: 44px;
 	}
 
 #tapOpenPanel, #tapClosePanel {
-	padding:10px 15px; width:20px; height:20px;
+	padding:10px 15px; width:22px; height:22px;
 	}
 	
 .filterTransparent {

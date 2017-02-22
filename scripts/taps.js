@@ -10,6 +10,11 @@ $(document).on("ready", function() {
 	$("#tapAusflugstipps").off("click").click(function() {
 		initA();
 	});
+
+	$("#tapOstseecard").off("click").click(function() {
+		initO();
+	});
+
 	$("#tapInDerNahe").off("click").click(function() {
 		initI();
 	});
@@ -28,7 +33,6 @@ $(document).on("ready", function() {
 		gotoUkarte();
 	});
 
-
 	// AUSFLUGSTIPPS
 	$("#pageAkarte .tapListe").off("click").click(function() {
 		gotoAliste();
@@ -37,6 +41,14 @@ $(document).on("ready", function() {
 		gotoAkarte();
 	});
 
+	// OSTSEECARD
+	$("#pageOkarte .tapListe").off("click").click(function() {
+		gotoOliste();
+	});
+	$("#pageOliste .tapKarte").off("click").click(function() {
+		gotoOkarte();
+	});
+	
 	// IN DER NÄHE
 	$("#pageIkarte .tapListe").off("click").click(function() {
 		gotoIliste();
@@ -51,10 +63,11 @@ $(document).on("ready", function() {
 
 
 	
-	$('#panel .panelCatIconContainer').click(function() {
+	$('#panel li').click(function() {
 		
 		// index-Zahl der geklickten Kategorie ermitteln - +2 wegen Arraystart 0
-		var liIndex = $(this).parent("li").index() + 2;
+		// ALT: var liIndex = $(this).parent("li").index() + 2;
+		var liIndex = $(this).index() + 2;
 
 		// Sessionvariable holen
 		var sessionFilterState = sessionStorage.getItem("filterState");
@@ -76,11 +89,12 @@ $(document).on("ready", function() {
 		// FilterState ausgeben
 		// alert(filterState[liIndex]);
 		console.log(filterState);
-				
+		// Listenelemente togglen
 		$(".category" + liIndex).slideToggle(100);
-		
+		// Karten-Marker togglen
 		toggleMapMarkers(liIndex);
-		$(this).toggleClass("filterTransparent");			
+		// Geklicktes Icon im Panel togglen
+		$(this).children("div").toggleClass("filterTransparent");			
 				
 	});
 	
@@ -103,7 +117,11 @@ $(document).on("ready", function() {
 	$("#aMapLocateMe").click(function() {
 		navigateToUserPosition(aMap);
 	});
-	
+
+	$("#oMapLocateMe").click(function() {
+		navigateToUserPosition(oMap);
+	});
+
 	
 });
 

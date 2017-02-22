@@ -45,7 +45,11 @@ $(document).ready(function() {
 	$("#pageIkarte").on("pagebeforecreate", function() {
 		
 		populateMap(iMap, 0);
-				
+
+				setTimeout(function() {
+		            $( "#panel" ).panel( "open" );
+		},0);
+		
 	});
 
 	// BEFORESHOW - 1x

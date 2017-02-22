@@ -31,7 +31,7 @@ function convertKategorie(kategorie) {
 		appKategorie = "5";
 		break;
 		case "Parkplätze":
-		appKategorie = "7";
+		appKategorie = "8";
 	}
 	// Wert zurückgeben
 	return appKategorie;
@@ -61,7 +61,40 @@ function convertImageURL(url, file) {
 	// Wert zurückgeben
 	return imageURL.toLowerCase();
 	}
-	
+
+// Website URL von POIs um das http:// kürzen
+function stripWebsiteURL(url) {
+	if (url != null && url.length >= 1) {
+		// Anfang des Dateinamens ermitteln
+		startPosition = url.indexOf("://");
+
+		if (startPosition > 1) {
+			startPosition = startPosition + 3;
+		}
+		// Datei ermitteln, Pfade abschneiden
+		url = url.substr(startPosition);
+
+		startPosition = url.indexOf("www.");
+
+		// Wenn www. fehlt, dann dieses hinzufügen
+		if (startPosition != 0) {
+			url = 'www.' + url;	
+		}
+
+		lastChar = url.substr(url.length - 1);
+
+		if (lastChar == "/") {
+			url = url.substr(0, url.length -1);
+		}
+	}
+
+	else {
+		url = "";
+	}
+		// Wert zurückgeben
+		return url.toLowerCase();
+}
+
 // Backslashes aus URLs entfernen
 function stripURL(url) {
 	var url = url.replace(/\\/g, "");

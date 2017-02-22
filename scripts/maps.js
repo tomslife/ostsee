@@ -1,3 +1,5 @@
+var GeoMarker;
+
 // Karten initialisieren, wird als Callback direkt nach Laden der Google Maps API aufgerufen
 function initMaps() {
 	
@@ -27,6 +29,7 @@ function initMaps() {
 	uMap = new google.maps.Map(document.getElementById('uMap'), mapOptions);
 	aMap = new google.maps.Map(document.getElementById('aMap'), mapOptions);
 	iMap = new google.maps.Map(document.getElementById('iMap'), mapOptions);
+	oMap = new google.maps.Map(document.getElementById('oMap'), mapOptions);
 
 	// POI Marker Array anlegen
 	poiMarkerArray = [];
@@ -70,9 +73,11 @@ function getUserPosition(whichMap, forcePan) {
 			sortPOIarray(lat, lng, lat, lng, 0);
 			
 			// Blauen Userposition Marker für alle Karten aktivieren
-			var GeoMarker = new GeolocationMarker(uMap);
-			var GeoMarker = new GeolocationMarker(aMap);
-			var GeoMarker = new GeolocationMarker(iMap);
+			GeoMarkerU = new GeolocationMarker;
+			GeoMarkerU.setMap(uMap);
+			var GeoMarkerA = new GeolocationMarker(aMap);
+			var GeoMarkerI = new GeolocationMarker(iMap);
+			var GeoMarkerO = new GeolocationMarker(oMap);
 			
 			// UserPosition als GoogleMaps Konstruktor sichern
 			var pos = new google.maps.LatLng(sessionStorage.userLocationLat, sessionStorage.userLocationLng);
@@ -247,14 +252,14 @@ function populateMap(whichMap, whichCategory) {
 			// Kategorie als lokale Variable
 			var category = daten.category;
 			var extension = daten.extension;
-			
+						
 			// Wenn Daten-Kategorie = spezieller Kategorie (U+A) oder wenn keine spezielle Kategorie (I)
 			if (category == whichCategory || whichCategory == 0) {
 
 				// Wenn keine spezielle Kategorie (I)
 				if (whichCategory == 0) {
-					// dann aus Orten (1) eine Touristinfo (8) machen
-					category = category.replace("1", "8");
+					// dann aus Orten (1) eine Touristinfo (9) machen
+					category = category.replace("1", "9");
 				}
 
 				// Pin-Eigenschaften definieren

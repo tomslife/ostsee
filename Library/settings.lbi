@@ -2,7 +2,21 @@
 
 	<div id="detailContentContainer" class="ui-body settings">
 		<h2>Impressum</h2>
-		<p><strong>Inhaltlich Verantwortlicher:</strong><br>
+		
+		<p><strong>Herausgeber und für den Inhalt verantwortlich:</strong><br>
+		Ostsee-Tourismus-Service GmbH<br>
+		Kirchenstraße 3-5 (Stadtschule)<br>
+		23570 Lübeck-Travemünde</p>
+		
+		<p>Telefon: <a href="tel:+494502804103">+49 (0) 4502 - 804 103</a><br>
+		E-Mail: <a href="mailto:info@ostseecard.de">info@ostseecard.de</a>
+		</p>
+		
+		<p>Geschäftsführer: Uwe Kirchhoff<br>
+		Aufsichtsratsvorsitzender: Joachim Nitz<br>
+		HRB 1808, Amtsgericht Lübeck</p>
+		
+		<p><strong>Verantwortlich für Content und redaktionelle Inhalte:</strong><br>
 		Ostsee-Holstein-Tourismus e.V.<br>
 		Am Bürgerhaus 2<br>
 		23683 Scharbeutz<br>
@@ -12,7 +26,7 @@
 		E-Mail: <a href="mailto:info@ostsee-sh.de">info@ostsee-sh.de</a>
 		</p>
 
-		<p><strong>Geschäftsführerin:</strong><br>
+		<!-- p><strong>Geschäftsführerin:</strong><br>
 		Katja Lauritzen</p>
 		
 		<p><strong>Steuernummer:</strong><br>
@@ -21,9 +35,8 @@
 
 		<p><strong>Handelsregister:</strong><br>
 		Amtsgericht Lübeck, VR 1097<br>
-		Firmensitz: 23683 Scharbeutz</p>
-		</p>
-		
+		Firmensitz: 23683 Scharbeutz
+		</p -->
 		
 		<p><strong>Gestaltung & Entwicklung:</strong><br>
 		WEISS&KOHNEN - Agentur für Dialogmarketing GmbH<br>

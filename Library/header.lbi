@@ -1,5 +1,5 @@
 <div data-role="header" data-position="fixed" data-tap-toggle="false" data-add-back-btn="true">
-	<a data-rel="back" class="headerButton tapBack button"></a>
+	<a data-rel="back" class="headerButton tapBack button" style="background-image:url(../images/buttons/backButton.png) !important;" data-rjs="3"></a>
 
 	<h1>
 		<div class="headerSwitch">
@@ -17,6 +17,6 @@
 		</div -->
 
 	</h1>
-	<a class="headerButton tapHome button"></a>
+	<a class="headerButton tapHome button" style="background-image:url(../images/buttons/homeButton.png) !important;" data-rjs="3"></a>
 </div>
 

@@ -3,8 +3,8 @@
 <div id="panel" data-role="panel" data-theme="b" data-display="overlay">
 
 	<div id="smallPanel">
-			<img src="../images/buttons/openPanelNeu.png" id="tapOpenPanel">
-			<img src="../images/buttons/closePanelNeu.png" id="tapClosePanel">
+			<img src="../images/buttons/openPanel.png" data-rjs="3" id="tapOpenPanel">
+			<img src="../images/buttons/closePanel.png" data-rjs="3" id="tapClosePanel">
 		<ul class="">
 			<li>
 				<div id="panelCat2" class="panelCatIconContainer bg2 button"><img src="../images/icons/icon_2.png"></div>
@@ -24,14 +24,18 @@
 			</li>
 			<li>
 				<div id="panelCat6" class="panelCatIconContainer bg6 button"><img src="../images/icons/icon_6.png"></div>
-				<div class="panelCatTextContainer fontColorA uppercase">Lieblingsplätze</div>
+				<div class="panelCatTextContainer fontColorA uppercase">Ostseecard</div>
 			</li>
 			<li>
 				<div id="panelCat7" class="panelCatIconContainer bg7 button"><img src="../images/icons/icon_7.png"></div>
-				<div class="panelCatTextContainer fontColorA uppercase">Parkplätze</div>
+				<div class="panelCatTextContainer fontColorA uppercase">Lieblingsplätze</div>
 			</li>
 			<li>
 				<div id="panelCat8" class="panelCatIconContainer bg8 button"><img src="../images/icons/icon_8.png"></div>
+				<div class="panelCatTextContainer fontColorA uppercase">Parkplätze</div>
+			</li>
+			<li>
+				<div id="panelCat9" class="panelCatIconContainer bg9 button"><img src="../images/icons/icon_9.png"></div>
 				<div class="panelCatTextContainer fontColorA uppercase">Tourist-Info</div>
 			</li>
 		</ul>

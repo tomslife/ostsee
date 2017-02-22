@@ -10,14 +10,26 @@ body {
 
 #startContainer {
 	}
+
+#startLogo {position:absolute; width:60%; height:auto; margin:10% 0 0 8%;}
+
 #startContainer ul {
 	position:absolute; bottom:20px;
-	padding:0 8%;}
+	padding:0 8%; text-align: center;}
 	
-#startContainer li {
+/* #startContainer li {
 	float:left; box-sizing:border-box;
 	text-align:center;
-	width:50%; padding-bottom:22px;}
+	width:50%; padding-bottom:22px;} */
+
+#startContainer li {
+	display:inline-block; box-sizing:border-box;
+	text-align:center;
+	width:49%; padding-bottom:22px;}
+
+#tapOstseecard li {
+	width:51%;
+}
 
 #startContainer li div {
 	display:inline-block;
@@ -33,13 +45,13 @@ body {
 	height:100%;
 	vertical-align:middle;}
 
-#startContainer img {
-	width:50px; height:50px;
+#startContainer ul img {
+	width:44px; height:44px;
 	display:inline-block;
 	vertical-align:middle;}
 		
 #tapSettings {
-	position:absolute; top:25px; right:15px;
+	position:absolute; display: inline-block; margin:10% 8% 0 0; right:0px;
 	}
 
 #tapSettings i {
@@ -54,8 +66,7 @@ body {
 
 .tapBack {
 	background:none !important; border:none; border-radius:0;
-	background-image:url(../images/buttons/back_button.png) !important;
-	background-repeat:no-repeat !important; background-position:center 32px !important;
+	background-repeat:no-repeat !important; background-position:center 31px !important;
 	}	
 
 .headerSwitch {}
@@ -73,8 +84,7 @@ body {
 
 .tapHome {
 	background:none !important; border:none; border-radius:0;
-	background-image:url(../images/buttons/home_button.png) !important;
-	background-repeat:no-repeat !important; background-position:center 32px !important;
+	background-repeat:no-repeat !important; background-position:center 31px !important;
 	}
 	
 div[data-role="header"] a {

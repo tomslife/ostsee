@@ -13,10 +13,10 @@
 .ui-header .ui-title {padding-top:34px !important; margin-left:25% !important; margin-right:25% !important;}
 		
 /* Ajax-Loader ausblenden */
-.ui-loading .ui-loader {display:none !important;}
+/* .ui-loading .ui-loader {displady:none !important;} */
 
 /* Panel geschlossen: herausragen lassen */
-.ui-panel-closed {width:52px !important; visibility:visible !important; left:17em !important; clip:auto !important;}
+.ui-panel-closed {width:54px !important; visibility:visible !important; left:17em !important; clip:auto !important;}
 	
 /* Panel: stylen */
 .ui-panel-inner {padding:2px;}
@@ -27,6 +27,8 @@
 	}
 	
 /* Listview: verhindert, dass Zellen Padding erhalten */
-.ui-content .ui-btn {padding:0 !important; margin:0 !important;}
+.ui-content .ui-btn {padding:0px !important; margin:0 !important; border-width: 1px 0px 0px 0px !important; border-radius: 0 !important;}
 
-.ui-select .ui-btn {border-radius:10px !important; padding:0.4em !important; font-weight:normal !important; }
+.ui-field-contain .ui-btn {height:40px !important; line-height: 38px; text-align: left; padding-left: 10px !important; border-width: 1px 0 1px !important; box-shadow: 0 !important; box-sizing: border-box; border-style: dashed !important; background-color: #a08a72 !important;}
+.ui-field-contain {padding:0 !important; margin: 0 !important; border: 0;}
+.ui-select {margin:0 !important;}

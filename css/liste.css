@@ -8,7 +8,7 @@ a {text-decoration:none;}
 .listview { padding:0 !important; margin:0 !important;}
 
 .listview li {
-	padding:0 !important; margin:0 !important;
+	padding:0px !important; margin:0px !important; border: 0 !important;
 	}
 
 .listviewTable {
@@ -27,7 +27,7 @@ a {text-decoration:none;}
 	padding-right:20px;
 	}
 
-.hyphen {
+.hyphden {
 	-webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto;
 	-webkit-hyphenate-limit-chars: auto 5;
 	}
@@ -53,7 +53,7 @@ a {text-decoration:none;}
 	}
 
 .listview img {
-	display:inline; float:right; border:0px solid #fff !important; height:100%; width:auto;
+	display:inline; float:right; height:100%; width:auto;
 	}
 
 .listeHeadlineTable {
@@ -69,6 +69,10 @@ a {text-decoration:none;}
 .listeHeadlineImage {
 	float:right;
 	}
+
+#headlineListviewO p {
+	display: inline-block; height: 100%; text-overflow: ellipsis; white-space: normal;
+}
 
 .ul_liste { margin:0 !important; padding:0 !important;
 	}
@@ -91,6 +95,15 @@ a {text-decoration:none;}
 .ul_Liste li img {
 	height:31px; float:right !important; border:1px solid #fff !important; padding:6px !important; border-radius:40px !important;
 	}
+
+/* Kein Border für erste Ergebnis-Zeile der V-Liste, weil Ortsfilter oben und unten Border bekommt */
+#pageVliste .listview .ui-first-child .ui-btn {
+	border-width: 0 !important;
+}
+
+.ui-field-contain i {
+	position: absolute; top: 8px; right: 20px;	
+}
 
 .googleMap {
 	position:absolute !important; top:76px !important; right:0; bottom:0 !important; left:0px !important; bottom:0px !important; padding:0 !important;

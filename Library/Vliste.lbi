@@ -12,6 +12,18 @@
 	
 	<div class="sektionFoto">Veranstaltungen - <br>die tollsten Events</div>
 
-	<ul id="listviewV" data-role="listview" class="listview" data-theme="b" data-icon="false">
+<div class="ui-field-contain" style="background-color: #a08a72;">
+	<select name="ortsfilterSelect" id="ortsfilterSelect" data-native-menu="true" data-iconpos="noicon">
+        <option value="" id="ortsfilterHeadline">Ortsfilter</option>
+        <option value="">&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;</option>
+    </select>
+	<i class="material-icons button fontColorA">sort</i>
+</div>
+
+	<form class="ui-filterable" style="display: none;">
+    <input id="filterBasic-input" data-type="search">
+	</form>
+
+	<ul id="listviewV" data-role="listview" class="listview" data-theme="b" data-icon="false" data-filter="true" data-input="#filterBasic-input">
 	</ul>
 </div>
