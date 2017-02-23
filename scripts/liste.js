@@ -1,9 +1,9 @@
-function populateListview(sektion, category) {
+function populateListview(sektion, categoryA, categoryB) {
 		$.each(POIarray, function(object, daten) {
 				// POI Radius aus den globalen Init-Daten auslesen
 				var poiRadius = sessionStorage.Proximity;
 				// wenn POI Distanz kleiner als POI Radius 
-				if (daten.category == category) {
+				if (daten.category == categoryA || daten.category == categoryB) {
 					// Funktion: Listview Items erzeugen
 					createListviewItems("#listview" + sektion, daten.id, daten.name, daten.category, daten.userDistance, daten.extension);
 				}

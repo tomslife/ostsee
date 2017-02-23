@@ -236,7 +236,7 @@ function calculateDistance(userLatitude, userLongitude, poiLatitude, poiLongitud
 }
 
 // Karte mit Markern bevölkern - geschieht insgesamt nur 3x - für jede Karte 1x
-function populateMap(whichMap, whichCategory) {
+function populateMap(whichMap, whichCategory, whichCategoryB) {
 	// Begrenzung (Bounds) der Karte initialisieren
 	MapBounds = new google.maps.LatLngBounds();
 	// Infobox initialisieren
@@ -251,7 +251,7 @@ function populateMap(whichMap, whichCategory) {
 			var extension = daten.extension;
 						
 			// Wenn Daten-Kategorie = spezieller Kategorie (U+A) oder wenn keine spezielle Kategorie (I)
-			if (category == whichCategory || whichCategory == 0) {
+			if (category == whichCategory || category == whichCategoryB || whichCategory == 0) {
 
 				// Wenn keine spezielle Kategorie (I)
 				if (whichCategory == 0) {

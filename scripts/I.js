@@ -183,8 +183,8 @@ function populateListviewI(lat, lng) {
 		
 	$.each(POIarray, function(object, daten) {
 		var category = daten.category;
-		// aus Orten (1) eine Touristinfo (8) machen
-		category = category.replace("1", "8");
+		// aus Orten (1) eine Touristinfo (9) machen
+		category = category.replace("1", "9");
 		
 		// wenn POI Distanz kleiner als POI Radius 
 		if (Number(daten.centerDistance) < Number(poiRadius)) {

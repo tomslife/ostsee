@@ -16,4 +16,4 @@ c)};b.o=function(a){google.maps.event.trigger(this,"geolocation_error",a)};funct
 "function"===typeof this.define&&this.define.amd?this.define([],m):"object"===typeof this.exports?this.module.exports=m():this.GeolocationMarker=m();}).call(this) */
 /* TORO EDIT: */
 this.GeolocationMarker=m();}).call(this)
-//# sourceMappingURL=geolocation-marker.js.map
+/* sourceMappingURL=geolocation-marker.js.map */

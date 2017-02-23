@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 	// BEFORECREATE - 1x
 	$("#pageAkarte").on("pagebeforecreate", function() {
-		populateMap(aMap, 5);
+		populateMap(aMap, 5, 6);
 	});
 
 	// PAGESHOW - Nx
@@ -35,7 +35,7 @@ $(document).ready(function() {
 			// POI Array sortieren und updaten
 			sortPOIarray(sessionStorage.userLocationLat, sessionStorage.userLocationLng, 0, 0, 1);
 		}
-		populateListview("A", "5");
+		populateListview("A", "5", "6");
 	});	
 
 	// PAGESHOW - Nx

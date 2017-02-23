@@ -101,9 +101,9 @@ a {text-decoration:none;}
 	border-width: 0 !important;
 }
 
-/* Kein Border für erste Ergebnis-Zeile der I-Liste, weil sie direkt an Header grenzt */
-#pageIliste .listview .ui-first-child .ui-btn {
-	border-width: 0 !important;
+/* Border unten bei I-Liste, weil sie direkt an Header grenzt und die Filter den 1. Eintrag ständig verändern */
+#pageIliste .listview .ui-btn {
+	border-width: 0 0 1px 0 !important;
 }
 
 .ui-field-contain i {
