@@ -177,7 +177,7 @@ function fillPoiArray() {
 						// ist das Datenfeld osc-partner relevant für die Extension
 						extensionCheck = daten ["osc-partner"];
 						// Wenn OSC-Partner wahr, dann Extension auf + setzen (Ausnahme: nicht bei Urlaubsorten, weil Icon 1+.png nicht existiert.)
-						if (extensionCheck == true && appCategory != "1") {
+						if (extensionCheck == true && appCategory == "5") {
 							extension = "";
 							appCategory = "6";
 						}
@@ -194,7 +194,7 @@ function fillPoiArray() {
 				var websiteURL = stripWebsiteURL(daten.website);
 				
 				// Array füllen
-				POIarray[i] = {id: appID, category: appCategory, extension: extension, fkk: fkk, userDistance: 0, centerDistance: 0, name: daten.name, description: daten.longDescription, imageURL: imageURL, lat: daten.latitude, lng: daten.longitude, street: daten.street, zip: daten.zipcode, city: daten.city, phone: daten.phone, email: daten.email, website: websiteURL};					
+				POIarray[i] = {id: appID, category: appCategory, extension: extension, fkk: fkk, userDistance: 0, centerDistance: 0, name: daten.name, description: daten.longDescription, imageURL: imageURL, imageURLoriginal: daten.image, lat: daten.latitude, lng: daten.longitude, street: daten.street, zip: daten.zipcode, city: daten.city, phone: daten.phone, email: daten.email, website: websiteURL};					
 				++i;
 
 			}; // for loop

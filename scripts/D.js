@@ -1,5 +1,3 @@
-
-
 // Funktionen bei Seitenaufruf
 $(document).ready(function() {
 
@@ -33,15 +31,20 @@ function onDeviceReady() {
 		// setzen der aktuellen Kategorie (wichtig zum Entfernen der Farbklasse beim Event "pagehide")
 		sessionStorage.currentCategory = detailKategorie;
 
+		// Wenn Element kein POI Urlaubsort ist...
 		if (detailKategorie != 1) {
+			// dann die POI-Buttons ausblenden
 			$("#detailPOIlinks").hide();
 		}
-	
+		
+		// Wenn Element eine Veranstaltung ist...
 		if (detailKategorie == 10) {
 			
+			// Adresse und Buttons verstecken
 			$("#detailPOIaddress").hide();
 			$("#detailPOIbuttons").hide();
 			
+			// JSON Call: Termin Detail abrufen...
 			$.getJSON("https://ssl.optimale-praesentation.de/comm/json/oht_vkal_json.php?mode=detail&vid=" + detailID + "&secratoid=96611bf07", function(data) {
 
 				var detailName = data.title;
@@ -50,7 +53,7 @@ function onDeviceReady() {
 				var detailOrt = data.contact.city;
 				var detailTimestamp = sessionStorage.detailTimestamp;
 
-				$(".swiper-wrapper").append('<div class="swiper-slide" style="background-image:url(' + detailImageURL + ')"></div>');
+				assignDetailImage(detailImageURL);
 				$(".detailHeadlineContainer").addClass("bg" + detailKategorie);
 				$(".detailHeadlineIcon").attr("src", "images/icons/icon_V.png");
 				$(".detailHeadlineH1").append(detailName);
@@ -78,6 +81,7 @@ function onDeviceReady() {
 			});
 		}
 		
+		// ansonsten, wenn Element ein POI ist...
 		else {
 			// POI Array loopen
 			$.each(POIarray, function(object, daten) {
@@ -89,7 +93,10 @@ function onDeviceReady() {
 							sessionStorage.setLat = daten.lat; sessionStorage.setLng = daten.lng;
 							
 							detailName = daten.name;
-							detailImageURL = daten.imageURL;
+							detailImageURL = "images/content/" + daten.imageURL;
+							
+							checkLocalFileExists(detailImageURL, daten.imageURLoriginal);
+							
 							detailDescription = daten.description;
 							detailExtension = daten.extension;
 							detailFKK = daten.fkk;
@@ -139,8 +146,7 @@ function onDeviceReady() {
 							$("#detailPOIdescription").append(formatJSONcontent(detailDescription));
 							
 							$(".detailHeadlineIcon").attr("src", "images/icons/icon_" + detailKategorie + daten.extension + ".png");
-							$(".swiper-wrapper").append('<div class="swiper-slide" style="background-image:url(images/content/' + detailImageURL + ')"></div>');
-	
+															
 							if (daten.street != null) {
 								if (daten.street.length >= 1) {
 									$("#detailPOIaddress").append(daten.name + '<br>' + daten.street);
@@ -261,3 +267,24 @@ function formatJSONcontent(content) {
 	return content;
 	}
 
+function checkLocalFileExists(url, urlOriginal) {
+	$.ajax({
+		url:url,
+		type:'HEAD',
+		error: function()
+		{
+			// Error: Datei aus dem Internet nachladen (auskommentieren bei App Foto-Kontrolle)
+			// assignDetailImage(urlOriginal);
+		},
+		success: function()
+		{
+			// Success: Lokale Datei zuweisen
+			assignDetailImage(url);
+		}
+	});
+	
+}
+
+function assignDetailImage(url) {
+	$(".swiper-wrapper").append('<div class="swiper-slide" style="background-image:url(' + url + ')"></div>');
+}
