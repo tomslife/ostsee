@@ -79,7 +79,7 @@ function setSeason() {
 	if (currentMonth >= 3 && currentMonth <= 5) {
 		sessionStorage.Season = 1;
 		}
-	if (currentMonth >= 6 && currentMonth <= 8) {
+	else if (currentMonth >= 6 && currentMonth <= 8) {
 		sessionStorage.Season = 2;
 		}
 	else if (currentMonth >= 9 && currentMonth <= 10) {
