@@ -45,7 +45,7 @@ function onDeviceReady() {
 			$("#detailPOIbuttons").hide();
 			
 			// JSON Call: Termin Detail abrufen...
-			$.getJSON("https://ssl.optimale-praesentation.de/comm/json/oht_vkal_json.php?mode=detail&vid=" + detailID + "&secratoid=96611bf07", function(data) {
+			$.getJSON("https://ssl.optimale-praesentation.de/comm/json/oht_vkal_json.php?mode=detail&vid=" + detailID + "&secratoid=96611bf07&version=2", function(data) {
 
 				var detailName = data.title;
 				var detailImageURL = "http:" + data.image;
