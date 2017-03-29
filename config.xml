@@ -4,8 +4,7 @@
 	ios-CFBundleIdentifier="com.interlunium.58.4247.ostsee" 
 	id="com.tourias.android.guide.oht" 
 	version="4.1" 
-	versionCode="12"
-	android-versionCode="12">
+	versionCode="11">
 
  	<name>Ostsee</name>
   	<description>Offizielle App des Ostsee-Holstein-Tourismus e.V.</description>
@@ -17,7 +16,7 @@
   	<preference name="target-device" value="handset" />
 	
 	<!-- PLUGINS -->
-	<plugin name="cordova-plugin-device" spec="1.1.4" />
+	<plugin name="cordova-plugin-device" spec="1.1.3" />
 	<plugin name="cordova-plugin-device-orientation" spec="1.0.4" />
 	<plugin name="cordova-plugin-dialogs" spec="1.2.1" />
 	<plugin name="cordova-plugin-file" spec="4.1.1" />
