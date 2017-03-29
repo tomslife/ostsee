@@ -17,7 +17,7 @@
   	<preference name="target-device" value="handset" />
 	
 	<!-- PLUGINS -->
-	<plugin name="cordova-plugin-device" spec="1.1.3" />
+	<plugin name="cordova-plugin-device" spec="1.1.4" />
 	<plugin name="cordova-plugin-device-orientation" spec="1.0.4" />
 	<plugin name="cordova-plugin-dialogs" spec="1.2.1" />
 	<plugin name="cordova-plugin-file" spec="4.1.1" />
