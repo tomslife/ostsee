@@ -4,7 +4,7 @@
 	ios-CFBundleIdentifier="com.interlunium.58.4247.ostsee" 
 	id="com.tourias.android.guide.oht" 
 	version="4.1" 
-	versionCode="11">
+	android-versionCode="11">
 
  	<name>Ostsee</name>
   	<description>Offizielle App des Ostsee-Holstein-Tourismus e.V.</description>
