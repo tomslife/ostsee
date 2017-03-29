@@ -147,7 +147,7 @@ function sortPOIarray(userLat, userLng, centerLat, centerLng, update) {
 			userDistance = calculateDistance(userLat, userLng, daten.lat, daten.lng);
 			centerDistance = calculateDistance(centerLat, centerLng, daten.lat, daten.lng);
 			
-			// Wenn die Distanz kleiner 40 und die Variable noch nicht wahr...
+			// Wenn die Distanz kleiner 50 und die Variable noch nicht wahr...
 			if (userDistance <= 50 && userLocationOHT != 1) {
 				// User IST im OHT Gebiet, Wert in die Session Storage schreiben
 				userLocationOHT = 1;
