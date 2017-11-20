@@ -10,7 +10,7 @@
   	<description>Offizielle App des Ostsee-Holstein-Tourismus e.V.</description>
   	<author href="http://toro-digital.com" email="info@toro-digital.com">TORO Digital</author>
   	<content src="index.html"/>
-  	<preference name="DisallowOverscroll" value="false"/>
+  	<preference name="DisallowOverscroll" value="true"/>
   	<preference name="android-minSdkVersion" value="14"/>
   	<preference name="orientation" value="portrait" />
   	<preference name="target-device" value="handset" />
