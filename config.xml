@@ -6,7 +6,7 @@
 	version="4.2.0" 
 	versionCode="13">
 
- 	<name>Ostsee</name>
+ 	<name>Ostsee test</name>
   	<description>Offizielle App des Ostsee-Holstein-Tourismus e.V.</description>
   	<author href="http://toro-digital.com" email="info@toro-digital.com">TORO Digital</author>
   	<content src="index.html"/>
