@@ -31,6 +31,10 @@ function initMaps() {
 
 	// POI Marker Array anlegen
 	poiMarkerArray = [];
+    
+    google.maps.event.addListenerOnce(uMap, "idle", function() {
+        google.maps.event.trigger(uMap, "resize");
+    })
 }
 
 // Aufruf, wenn User auf Locate Button klickt
