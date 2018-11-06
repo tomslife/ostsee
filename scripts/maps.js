@@ -32,9 +32,6 @@ function initMaps() {
 	// POI Marker Array anlegen
 	poiMarkerArray = [];
     
-    google.maps.event.addListenerOnce(uMap, "idle", function() {
-        google.maps.event.trigger(uMap, "resize");
-    })
 }
 
 // Aufruf, wenn User auf Locate Button klickt
@@ -352,6 +349,10 @@ function populateMap(whichMap, whichCategory, whichCategoryB) {
 				sortPOIarray(sessionStorage.userLocationLat, sessionStorage.userLocationLng, centerLat, centerLng, 1);
 				mapResize(whichMap);
 		});
+
+        google.maps.event.addListenerOnce(whichMap, "idle", function() {
+            google.maps.event.trigger(whichMap, "resize");
+        })
 
 		// setTimeout(function(){ console.log(poiMarkerArray); }, 3000);
 }
