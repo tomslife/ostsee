@@ -167,7 +167,7 @@ function mapFitBounds(whichMap, bounds) {
 function mapResize(whichMap) {
 		setTimeout(function() {
 	google.maps.event.trigger(whichMap,'resize');
-		},500);
+		},300);
 }
 
 // Toggle die MapMarker gemäß Panel-Auswahl
@@ -349,10 +349,6 @@ function populateMap(whichMap, whichCategory, whichCategoryB) {
 				sortPOIarray(sessionStorage.userLocationLat, sessionStorage.userLocationLng, centerLat, centerLng, 1);
 				mapResize(whichMap);
 		});
-
-        google.maps.event.addListenerOnce(whichMap, "idle", function() {
-            google.maps.event.trigger(whichMap, "resize");
-        })
 
 		// setTimeout(function(){ console.log(poiMarkerArray); }, 3000);
 }
