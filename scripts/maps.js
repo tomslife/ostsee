@@ -166,7 +166,7 @@ function mapFitBounds(whichMap, bounds) {
 function mapResize(whichMap) {
 		setTimeout(function() {
 	google.maps.event.trigger(whichMap,'resize');
-		},300);
+		},500);
 }
 
 // Toggle die MapMarker gemäß Panel-Auswahl
