@@ -3,8 +3,8 @@
 	xmlns:gap="http://phonegap.com/ns/1.0" 
 	ios-CFBundleIdentifier="com.interlunium.58.4247.ostsee" 
 	id="com.tourias.android.guide.oht" 
-	version="4.2.5" 
-	versionCode="14">
+	version="4.3.0" 
+	versionCode="15">
 
  	<name>Ostsee</name>
   	<description>Offizielle App des Ostsee-Holstein-Tourismus e.V.</description>
