@@ -33,6 +33,7 @@
 		<preference name="ShowSplashScreenSpinner" value="false"/>
 		<preference name="SplashMaintainAspectRatio" value="true" />
 	<plugin name="cordova-plugin-statusbar" spec="2.1.3" />
+        <preference name="StatusBarBackgroundColor" value="#009bb1" />
 	<plugin name="cordova-plugin-whitelist" spec="1.2.2" />
     
  	<platform name="android">
