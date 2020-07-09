@@ -16,7 +16,7 @@
   	<preference name="orientation" value="portrait" />
   	<preference name="target-device" value="handset" />
 
-	<preference name='phonegap-version' value='cli-9.0.0' />
+	<!-- <preference name='phonegap-version' value='cli-9.0.0' /> -->
 	<!-- ALTEN BUILDER VERWENDEN -->
 	<preference name='pgb-builder-version' value='1' />
 		
